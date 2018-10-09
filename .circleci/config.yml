@@ -3,14 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/android:api-28-alpha
+      - image: nlknguyen/alpine-shellcheck:v0.4.6
     steps:
       - checkout
       - run: ./gradlew clean
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
-      - run: curl \
-             -F "status=2" \
-             -F "notify=0" \
-             -F "ipa=@AppName/build/outputs/apk/app-debug.apk" \
-             -H "X-HockeyAppToken: 4bac0a6e9f054038bbb899acf442d08a" \
-             https://rink.hockeyapp.net/api/2/apps/com.example.ananpengkhun.mycircleci/app_versions/upload
+      - run: sh ./deploy_dev.sh
