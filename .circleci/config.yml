@@ -8,9 +8,5 @@ jobs:
       - run: ./gradlew clean
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
-      - run: hockey(
-                   api_token: "4bac0a6e9f054038bbb899acf442d08a",
-                   ipa: 'app/build/outputs/apk/debug/app-debug.apk',
-                   notes_type: "1",
-                   notes: changelog,
-                 )
+      - run: cd ..
+      - run: sh deploy_dev.sh
