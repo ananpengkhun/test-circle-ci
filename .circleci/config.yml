@@ -5,4 +5,7 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       - checkout
+      - run: ./gradlew clean
       - run: ./gradlew build
+      - run: ./gradlew assembleDebug
+      - run: ./deploy_dev.sh
