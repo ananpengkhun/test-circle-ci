@@ -5,6 +5,8 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       - checkout
+      - run: git config --global user.email "se56160422@gmail.com"
+      - run: git config --global user.name "gumenza01"
       - run: ./gradlew clean
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
