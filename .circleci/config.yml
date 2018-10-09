@@ -8,4 +8,6 @@ jobs:
       - run: ./gradlew clean
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
-      - run: ./deploy_dev.sh
+      - run:
+         name: Deploy to hockey app
+         command: sh ./deploy_dev.sh
