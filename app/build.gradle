@@ -10,10 +10,9 @@ android {
         applicationId "com.example.ananpengkhun.mycircleci"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
+        versionCode 122
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        setVersionCode(120)
     }
     buildTypes {
         release {

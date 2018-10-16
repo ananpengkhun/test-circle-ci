@@ -10,3 +10,6 @@ jobs:
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
       - run: sh deploy_dev.sh
+    branches:
+      ignore:
+        - master
