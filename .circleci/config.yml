@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: circleci/android:api-28-alpha
     steps:
-      - run: ls
       - checkout
+      - run: ls
       - run: git config --global user.email "se56160422@gmail.com"
       - run: git config --global user.name "gumenza01"
       - run: ./gradlew clean
