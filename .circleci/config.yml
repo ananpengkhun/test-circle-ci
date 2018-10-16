@@ -11,5 +11,5 @@ jobs:
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
       - run: cd ..
-      - run: sh deploy_dev.sh
       - run: ./gradlew bumperVersionPatch
+      - run: sh deploy_dev.sh
