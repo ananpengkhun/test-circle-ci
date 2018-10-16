@@ -7,6 +7,7 @@ jobs:
       - checkout
       - run: cd ..
       - run: ./gradlew bumperVersionPatch
+      - run: git push --set-upstream origin ${CIRCLE_BRANCH}
       - run: ./gradlew clean
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
