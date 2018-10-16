@@ -9,7 +9,7 @@ jobs:
       - run: git config --global user.email "se56160422@gmail.com"
       - run: git config --global user.name "gumenza01"
       - run: ./gradlew bumperVersionPatch
-      - run: git push -q https://d1ac5c3f4654a08963e7c612be1b5a76b35102a2@github.com/gumenza01/test-circle-ci.git master
+      - run: git push -q https://d1ac5c3f4654a08963e7c612be1b5a76b35102a2@github.com/gumenza01/test-circle-ci.git -p 016825353#zx master
       - run: ./gradlew clean
       - run: ./gradlew build
       - run: ./gradlew assembleDebug
