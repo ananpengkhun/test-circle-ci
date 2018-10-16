@@ -7,6 +7,7 @@ jobs:
       - checkout
       - run: cd ..
       - run: ./gradlew bumperVersionPatch
+      - run: git config credential.helper 'cache--timeout=3600'
       - run: git push https://ec19ba62c5bf458ff503ea4dcf5bd354dcf5a270@github.com/gumenza01/test-circle-ci.git master
       - run: ./gradlew clean
       - run: ./gradlew build
